@@ -1,5 +1,9 @@
 # b-2-Spirit-OpenGL
-Northrop Grumman B-2 Spirit em OpenGL
+Northrop Grumman B-2 Spirit 
+
+Desenho feito como prova para a matéria de computação gráfica em Python OpenGL
+
+#Comandos
 
 #CONTROLE DE CAMÊRA
 
@@ -12,6 +16,7 @@ Northrop Grumman B-2 Spirit em OpenGL
  A -- Esquerda
 
  Seta para Cima Sobe a visão
+ 
  Seta para Baixo Desce a visão
 
  Mouse Direciona a camêra
