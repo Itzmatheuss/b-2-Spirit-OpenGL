@@ -3,6 +3,8 @@ Northrop Grumman B-2 Spirit
 
 Desenho feito como prova para a matéria de computação gráfica em Python OpenGL
 
+Necessário Python e OpenGl instalados
+
 #Comandos
 
 #CONTROLE DE CAMÊRA
