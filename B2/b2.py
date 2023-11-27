@@ -91,9 +91,7 @@ def draw_liga():
         glVertex3f(-0*aux, 6, 0)  # G
 
 
-        aux = aux*(-1)
-
-       
+        aux = aux*(-1) 
     
     glEnd()
 
@@ -168,18 +166,14 @@ def draw_Flap():
         glVertex3f(2.5, 5.5, 1)   # Canto superior esquerdo
         glEnd()
 
-    
         glTranslatef(3, 5, 1)
         glRotatef(45,0,0,1)
         glRotatef(-flaps,1,0,0)
         glRotatef(-45,0,0,1)
         glTranslatef( -3, -5, -1)
 
-        # faz igual depois daqui
 
         glColor3f(0.2, 0.2, 0.2)
-
-
         glTranslatef(-3,5, 1)
         glRotatef(-45,0,0,1)
         glRotatef(flaps,1,0,0)
@@ -199,7 +193,6 @@ def draw_Flap():
         glRotatef(45,0,0,1)
         glTranslatef(3, -5, -1)
 
-
 ave1 = 40
 ave2 = 20
 ave3 = 0
@@ -209,13 +202,14 @@ def cenario():
   
     glRotate(90,1,0,0)
     glPushMatrix()
+    glColor3f(0.2, 0.2, 0.2)
     glTranslate(-2,4,1)
     glColor3f(0.8, 0.8, 0.8)
     glBegin(GL_POLYGON)
     glVertex3f(-0.5, -1, (ave1-1))
-    glVertex3f(-0.5, -1, ave1)
+    glVertex3f(-0.5, 0, ave1)
     glVertex3f(0.5, -1, ave1)
-    glVertex3f(0.5, -1, (ave1-1))
+    glVertex3f(-0.5, -1, (ave1-1))
     glEnd()
     glPopMatrix()
     
@@ -223,9 +217,9 @@ def cenario():
     glTranslate(2,4,-1)
     glBegin(GL_POLYGON)
     glVertex3f(-0.5, -1, (ave2-1))
-    glVertex3f(-0.5, -1, ave2)
+    glVertex3f(-0.5, 0, ave2)
     glVertex3f(0.5, -1, ave2)
-    glVertex3f(0.5, -1, (ave2-1))
+    glVertex3f(-0.5, -1, (ave2-1))
     glEnd()
     glPopMatrix()
     
@@ -233,9 +227,9 @@ def cenario():
     glTranslate(-2,4,-1)
     glBegin(GL_POLYGON)
     glVertex3f(-0.5, -1, (ave3-1))
-    glVertex3f(-0.5, -1, ave3)
+    glVertex3f(-0.5, -0, ave3)
     glVertex3f(0.5, -1, ave3)
-    glVertex3f(0.5, -1, (ave3-1))
+    glVertex3f(-0.5, -1, (ave3-1))
     glEnd()
     glPopMatrix()
     
@@ -243,31 +237,21 @@ def cenario():
     glTranslate(-5,1,-1)
     glBegin(GL_POLYGON)
     glVertex3f(-0.5, -1, (ave4-1))
-    glVertex3f(-0.5, -1, ave4)
+    glVertex3f(-0.5, -0, ave4)
     glVertex3f(0.5, -1, ave4)
-    glVertex3f(0.5, -1, (ave4-1))
+    glVertex3f(-0.5, -1, (ave4-1))
     glEnd()
     glPopMatrix()
     
     glPushMatrix()
     glBegin(GL_POLYGON)
     glVertex3f(-0.5, -1, (ave5-1))
-    glVertex3f(-0.5, -1, ave5)
+    glVertex3f(-0.5, -0, ave5)
     glVertex3f(0.5, -1, ave5)
-    glVertex3f(0.5, -1, (ave5-1))
+    glVertex3f(-0.5, -1, (ave5-1))
     glEnd()
     glPopMatrix()
-    
-    # < Cenário
-    
-    #----------------------------------------------------------------------------------------------
-
-    
     glFlush()
-
-
-
-    
 
 def main():
     pygame.init()
@@ -383,9 +367,6 @@ def main():
                     ave5 = 50
 
                 
-            
-
-
             # apply the left and right rotation
             glRotatef(mouseMove[0] * 0.1, 0.0, 1.0, 0.0)
 
